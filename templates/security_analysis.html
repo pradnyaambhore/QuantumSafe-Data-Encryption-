@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Security Analysis | QuantumSafe</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+            Quantum<span>Safe</span>
+        </div>
+
+        <div class="tagline">
+            Security Analysis Dashboard
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>Security Analysis</h1>
+
+        <p>
+            Overview of the cryptographic security
+            components currently active in the
+            QuantumSafe system.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Security Checks</h2>
+
+            <p>
+                Current security components and
+                verification status.
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+            <div class="card">
+
+                <div class="card-icon">🔐</div>
+
+                <h3>ML-KEM-768</h3>
+
+                <p>
+                    Post-quantum key establishment
+                    component.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">✍️</div>
+
+                <h3>ML-DSA-65</h3>
+
+                <p>
+                    Post-quantum digital signature
+                    verification.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🛡️</div>
+
+                <h3>SHA3-256</h3>
+
+                <p>
+                    Integrity and tamper detection
+                    mechanism.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🔒</div>
+
+                <h3>AES-256-GCM</h3>
+
+                <p>
+                    Authenticated symmetric file
+                    encryption.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Security Verification</h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Overall Security Checks
+            </h3>
+
+            <p>
+                The following components are currently
+                enabled in the QuantumSafe system.
+            </p>
+
+            <br>
+
+            <div class="algorithm-list">
+
+                <div class="algorithm">
+                    ✓ ML-KEM-768 — Active
+                </div>
+
+                <div class="algorithm">
+                    ✓ ML-DSA-65 — Active
+                </div>
+
+                <div class="algorithm">
+                    ✓ SHA3-256 — Active
+                </div>
+
+                <div class="algorithm">
+                    ✓ AES-256-GCM — Active
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>
+                Security Workflow
+            </h2>
+
+            <br>
+
+            <div class="algorithm-list">
+
+                <div class="algorithm">
+                    <strong>1.</strong>
+                    ML-KEM-768 → Key Establishment
+                </div>
+
+                <div class="algorithm">
+                    <strong>2.</strong>
+                    HKDF-SHA3-256 → Key Derivation
+                </div>
+
+                <div class="algorithm">
+                    <strong>3.</strong>
+                    AES-256-GCM → File Encryption
+                </div>
+
+                <div class="algorithm">
+                    <strong>4.</strong>
+                    SHA3-256 → Integrity Verification
+                </div>
+
+                <div class="algorithm">
+                    <strong>5.</strong>
+                    ML-DSA-65 → Digital Signature
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>
+                Security Status
+            </h2>
+
+            <br>
+
+            <h3>
+                ✓ Cryptographic Components Active
+            </h3>
+
+            <p>
+                QuantumSafe security components are
+                available for the current system workflow.
+            </p>
+
+            <br>
+
+            <a href="/" class="btn">
+                Back to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <p>
+        QuantumSafe Data Encryption
+    </p>
+
+    <p>
+        Security Analysis Dashboard
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

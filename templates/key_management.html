@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Key Management | QuantumSafe
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+            Quantum<span>Safe</span>
+        </div>
+
+        <div class="tagline">
+            Cryptographic Key Management
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+            Key Management
+        </h1>
+
+        <p>
+            Overview of cryptographic keys used by the
+            QuantumSafe Data Encryption system.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     KEY COMPONENTS
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Cryptographic Key Components
+            </h2>
+
+            <p>
+                Key components involved in the current
+                QuantumSafe encryption and authentication workflow.
+            </p>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <!-- ML-KEM -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    ML-KEM-768
+                </h3>
+
+                <p>
+                    Post-quantum key encapsulation mechanism
+                    used for secure shared-secret establishment.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+
+            <!-- ML-DSA -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ✍️
+                </div>
+
+                <h3>
+                    ML-DSA-65
+                </h3>
+
+                <p>
+                    Post-quantum digital signature algorithm
+                    used for authentication and verification.
+                </p>
+
+                <span class="active">
+                    ✓ ACTIVE
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ML-KEM KEY INFORMATION
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="card">
+
+            <h2>
+                🔐 ML-KEM-768 Key Information
+            </h2>
+
+            <br>
+
+
+            <div class="algorithm-list">
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Public Key
+                    </strong>
+
+                    <br>
+
+                    Used for ML-KEM-768
+                    key encapsulation.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Secret Key
+                    </strong>
+
+                    <br>
+
+                    Used for ML-KEM-768
+                    decapsulation during decryption.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Shared Secret
+                    </strong>
+
+                    <br>
+
+                    Derived during the ML-KEM
+                    encapsulation/decapsulation process.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        AES Key
+                    </strong>
+
+                    <br>
+
+                    Derived from the shared secret using
+                    HKDF-SHA3-256.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ML-DSA KEY INFORMATION
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="card">
+
+            <h2>
+                ✍️ ML-DSA-65 Key Information
+            </h2>
+
+            <br>
+
+
+            <div class="algorithm-list">
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Public Key
+                    </strong>
+
+                    <br>
+
+                    Used to verify ML-DSA-65
+                    digital signatures.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Secret Key
+                    </strong>
+
+                    <br>
+
+                    Used to generate ML-DSA-65
+                    digital signatures.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     KEY SECURITY STATUS
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="card">
+
+            <h2>
+                🛡️ Key Security Status
+            </h2>
+
+            <br>
+
+
+            <div class="algorithm-list">
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        ML-KEM-768
+                    </strong>
+
+                    <br>
+
+                    Key generation and
+                    decapsulation: ACTIVE
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        ML-DSA-65
+                    </strong>
+
+                    <br>
+
+                    Signature generation and
+                    verification: ACTIVE
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Key Storage
+                    </strong>
+
+                    <br>
+
+                    Development / Demonstration Mode
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        Production Key Protection
+                    </strong>
+
+                    <br>
+
+                    Additional secure key-storage
+                    controls are required for production use.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     KEY WORKFLOW
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="card">
+
+            <h2>
+                🔄 Key Management Workflow
+            </h2>
+
+            <br>
+
+
+            <div class="algorithm-list">
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        1.
+                    </strong>
+
+                    ML-KEM-768 generates a key pair.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        2.
+                    </strong>
+
+                    ML-KEM-768 establishes a
+                    shared secret.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        3.
+                    </strong>
+
+                    HKDF-SHA3-256 derives the
+                    AES-256 encryption key.
+
+                </div>
+
+
+
+                <div class="algorithm">
+
+                    <strong>
+                        4.
+                    </strong>
+
+                    ML-DSA-65 generates and verifies
+                    digital signatures.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BACK TO DASHBOARD
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>
+                QuantumSafe Key Management
+            </h2>
+
+            <p>
+                Cryptographic keys are essential components
+                of the QuantumSafe security architecture.
+            </p>
+
+            <br>
+
+            <a href="/" class="btn">
+                Back to Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        QuantumSafe Data Encryption
+    </p>
+
+    <p>
+        Cryptographic Key Management
+    </p>
+
+    <p>
+        ML-KEM-768 • HKDF-SHA3-256 • AES-256-GCM • ML-DSA-65
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+_pycache_/
+*.pyc
+.venv/
+venv/
+.env
+uploads/
+*.qsf
+.vscode/
+audit_log.json
+app_backup.py
+templates/gitignore.txt
+
+liboqs/

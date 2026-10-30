@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Test | QuantumSafe</title>
+</head>
+
+<body>
+
+    <h1>Security Test Lab</h1>
+
+    <p>
+        Test the integrity protection of a QuantumSafe encrypted file.
+    </p>
+
+    <hr>
+
+    <h2>SHA3-256 Tamper Detection</h2>
+
+    <p>
+        Upload a <b>.qsf</b> file to verify whether its encrypted
+        data has been modified.
+    </p>
+
+    <form action="/security-test" method="POST" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="file"
+            accept=".qsf"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Run Security Test
+        </button>
+
+    </form>
+
+</body>
+</html>

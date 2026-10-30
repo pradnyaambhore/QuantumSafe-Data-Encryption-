@@ -1,0 +1,721 @@
+/* =========================================
+   QuantumSafe Data Encryption
+   Professional Dashboard Style
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7f6;
+    color: #17221f;
+    line-height: 1.6;
+
+    animation: pageFadeIn 0.6s ease-out;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    background: #0b2d25;
+    color: white;
+    padding: 22px 0;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.logo span {
+    color: #63d6a5;
+}
+
+/* Tagline */
+
+.tagline {
+    font-size: 13px;
+    color: #c8ddd6;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            #0b2d25,
+            #164f40
+        );
+
+    color: white;
+    padding: 55px 0;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle background glow */
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 214, 165, 0.08);
+
+    right: -80px;
+    top: -100px;
+
+    animation: heroGlow 6s ease-in-out infinite;
+}
+
+/* Hero heading */
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    position: relative;
+    z-index: 1;
+
+    animation: heroTitle 0.8s ease-out;
+}
+
+/* Hero paragraph */
+
+.hero p {
+    color: #d8ebe5;
+    max-width: 650px;
+
+    position: relative;
+    z-index: 1;
+
+    animation: heroText 1s ease-out;
+}
+
+/* =========================================
+   STATUS BAR
+   ========================================= */
+
+.status-bar {
+    background: white;
+
+    margin-top: -25px;
+
+    position: relative;
+    z-index: 5;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    animation: statusAppear 0.8s ease-out;
+}
+
+/* Status card */
+
+.status-card {
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #f1f8f5;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+
+    background: #f7fbf9;
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.10);
+}
+
+.status-card h4 {
+    color: #0b2d25;
+    margin-bottom: 4px;
+}
+
+/* Active status */
+
+.active {
+    color: #16865c;
+    font-weight: 700;
+
+    animation:
+        statusPulse 2.5s ease-in-out infinite;
+}
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.section {
+    padding: 45px 0;
+}
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    color: #0b2d25;
+}
+
+.section-title p {
+    color: #64736e;
+}
+
+/* =========================================
+   CARD GRID
+   ========================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+/* =========================================
+   MAIN CARD
+   ========================================= */
+
+.card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    border: 1px solid #e4ece8;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: cardAppear 0.7s ease both;
+}
+
+/* subtle top highlight */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #63d6a5;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Card hover */
+
+.card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.12);
+
+    border-color: #c9ddd5;
+}
+
+/* =========================================
+   STAGGERED CARD ANIMATION
+   ========================================= */
+
+.card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.10s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.20s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.card:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.card:nth-child(8) {
+    animation-delay: 0.40s;
+}
+
+.card:nth-child(9) {
+    animation-delay: 0.45s;
+}
+
+.card:nth-child(10) {
+    animation-delay: 0.50s;
+}
+
+/* =========================================
+   CARD ICON
+   ========================================= */
+
+.card-icon {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.card:hover .card-icon {
+    transform:
+        scale(1.12)
+        rotate(-3deg);
+
+    filter:
+        drop-shadow(
+            0 5px 8px
+            rgba(22, 134, 92, 0.18)
+        );
+}
+
+/* =========================================
+   CARD TEXT
+   ========================================= */
+
+.card h3 {
+    color: #0b2d25;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #697873;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.btn {
+    display: inline-block;
+
+    background: #0b2d25;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn:hover {
+    background: #164f40;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 7px 16px
+        rgba(11, 45, 37, 0.22);
+}
+
+.btn:active {
+    transform:
+        translateY(0);
+}
+
+/* =========================================
+   UPLOAD BOX
+   ========================================= */
+
+.upload-box {
+    background: white;
+
+    border:
+        2px dashed #b7ccc4;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.upload-box:hover {
+    border-color: #16865c;
+
+    background: #f7fbf9;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.06);
+}
+
+.upload-box input[type="file"] {
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   ALGORITHM LIST
+   ========================================= */
+
+.algorithm-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+/* Algorithm item */
+
+.algorithm {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    border-left:
+        5px solid #16865c;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.algorithm:hover {
+    transform:
+        translateX(5px);
+
+    background: #f9fcfb;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+.algorithm strong {
+    color: #0b2d25;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background: #0b2d25;
+
+    color: #c9ddd6;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    font-size: 13px;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+/* Whole page */
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero heading */
+
+@keyframes heroTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero text */
+
+@keyframes heroText {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero glow */
+
+@keyframes heroGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Status bar */
+
+@keyframes statusAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Active status pulse */
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .status-bar {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .status-bar,
+    .card-grid,
+    .algorithm-list {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .section {
+        padding: 35px 0;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+}

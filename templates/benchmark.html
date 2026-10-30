@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Performance Benchmark | QuantumSafe</title>
+
+</head>
+
+<body>
+
+    <h1>📊 Performance Benchmark</h1>
+
+    <p>
+        Measure the performance of QuantumSafe encryption
+        and decryption operations.
+    </p>
+
+    <hr>
+
+    <h2>Encryption Benchmark</h2>
+
+    <p>
+        Upload a file to measure encryption performance.
+    </p>
+
+    <form
+        action="/benchmark"
+        method="POST"
+        enctype="multipart/form-data"
+    >
+
+        <input
+            type="file"
+            name="file"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Run Benchmark
+        </button>
+
+    </form>
+
+    <hr>
+
+    <h2>Algorithms Tested</h2>
+
+    <ul>
+
+        <li>ML-KEM-768</li>
+
+        <li>HKDF-SHA3-256</li>
+
+        <li>AES-256-GCM</li>
+
+        <li>SHA3-256</li>
+
+        <li>ML-DSA-65</li>
+
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Security Audit Log | QuantumSafe</title>
+</head>
+
+<body>
+
+    <h1>📋 Security Audit Log</h1>
+
+    <p>
+        Security events recorded by the QuantumSafe system.
+    </p>
+
+    <hr>
+
+    {% if logs %}
+
+        <table border="1" cellpadding="10">
+
+            <tr>
+                <th>Date & Time</th>
+                <th>Event</th>
+                <th>Status</th>
+                <th>Details</th>
+            </tr>
+
+            {% for log in logs %}
+
+            <tr>
+
+                <td>
+                    {{ log.timestamp }}
+                </td>
+
+                <td>
+                    {{ log.event }}
+                </td>
+
+                <td>
+                    {{ log.status }}
+                </td>
+
+                <td>
+                    {{ log.details }}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    {% else %}
+
+        <p>
+            No security events recorded yet.
+        </p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+        Back to Dashboard
+    </a>
+
+</body>
+
+</html>

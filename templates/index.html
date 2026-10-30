@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>QuantumSafe Data Encryption</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+            Quantum<span>Safe</span>
+        </div>
+
+        <div class="tagline">
+            Quantum-Safe Data Protection System
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+            Quantum-Safe Data Encryption
+        </h1>
+
+        <p>
+            Protect your files using modern post-quantum
+            cryptography with ML-KEM-768, AES-256-GCM,
+            SHA3-256 and ML-DSA-65.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ALGORITHM STATUS
+========================================================= -->
+
+<div class="container">
+
+    <div class="status-bar">
+
+        <div class="status-card">
+
+            <h4>
+                ML-KEM-768
+            </h4>
+
+            <span class="active">
+                ● ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="status-card">
+
+            <h4>
+                AES-256-GCM
+            </h4>
+
+            <span class="active">
+                ● ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="status-card">
+
+            <h4>
+                SHA3-256
+            </h4>
+
+            <span class="active">
+                ● ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="status-card">
+
+            <h4>
+                ML-DSA-65
+            </h4>
+
+            <span class="active">
+                ● ACTIVE
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SECURITY OPERATIONS
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Security Operations
+            </h2>
+
+            <p>
+                Perform secure file protection and security
+                verification operations.
+            </p>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <!-- =================================================
+                 ENCRYPT FILE
+            ================================================== -->
+
+            <div class="card operation-card encrypt-card">
+
+                <div class="card-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Encrypt File
+                </h3>
+
+                <p>
+                    Encrypt your file using ML-KEM-768,
+                    HKDF-SHA3-256 and AES-256-GCM.
+                </p>
+
+                <form action="/encrypt"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <div class="upload-box">
+
+                        <input type="file"
+                               name="file"
+                               required>
+
+                        <br>
+
+                        <button class="btn"
+                                type="submit">
+
+                            Encrypt File
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DECRYPT FILE
+            ================================================== -->
+
+            <div class="card operation-card decrypt-card">
+
+                <div class="card-icon">
+                    🔓
+                </div>
+
+                <h3>
+                    Decrypt File
+                </h3>
+
+                <p>
+                    Decrypt a QuantumSafe .qsf encrypted
+                    file and recover the original file.
+                </p>
+
+                <form action="/decrypt"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <div class="upload-box">
+
+                        <input type="file"
+                               name="file"
+                               accept=".qsf"
+                               required>
+
+                        <br>
+
+                        <button class="btn"
+                                type="submit">
+
+                            Decrypt File
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECURITY TEST
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Security Test Lab
+                </h3>
+
+                <p>
+                    Verify encrypted data integrity using
+                    SHA3-256 tamper detection.
+                </p>
+
+                <form action="/security-test"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <div class="upload-box">
+
+                        <input type="file"
+                               name="file"
+                               accept=".qsf"
+                               required>
+
+                        <br>
+
+                        <button class="btn"
+                                type="submit">
+
+                            Run Security Test
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PERFORMANCE BENCHMARK
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Performance Benchmark
+                </h3>
+
+                <p>
+                    Measure encryption, decryption and
+                    digital signature performance.
+                </p>
+
+                <form action="/benchmark"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <div class="upload-box">
+
+                        <input type="file"
+                               name="file"
+                               required>
+
+                        <br>
+
+                        <button class="btn"
+                                type="submit">
+
+                            Run Benchmark
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CRYPTO INVENTORY
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Crypto Inventory
+                </h3>
+
+                <p>
+                    View all cryptographic algorithms used
+                    by the QuantumSafe system.
+                </p>
+
+                <a href="/crypto-inventory"
+                   class="btn">
+
+                    View Crypto Inventory
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 KEY MANAGEMENT
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔑
+                </div>
+
+                <h3>
+                    Key Management
+                </h3>
+
+                <p>
+                    View ML-KEM and ML-DSA key components
+                    and their security status.
+                </p>
+
+                <a href="/key-management"
+                   class="btn">
+
+                    View Key Management
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECURITY ANALYSIS
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Security Analysis
+                </h3>
+
+                <p>
+                    Analyze cryptographic components,
+                    security checks and the complete
+                    security workflow.
+                </p>
+
+                <a href="/security-analysis"
+                   class="btn">
+
+                    View Security Analysis
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 AUDIT LOG
+            ================================================== -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Security Audit Log
+                </h3>
+
+                <p>
+                    View recorded security events,
+                    verification results and activities.
+                </p>
+
+                <a href="/audit-log"
+                   class="btn">
+
+                    View Audit Log
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CRYPTOGRAPHIC ARCHITECTURE
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Cryptographic Architecture
+            </h2>
+
+            <p>
+                QuantumSafe uses a layered cryptographic
+                architecture.
+            </p>
+
+        </div>
+
+
+        <div class="algorithm-list">
+
+
+            <div class="algorithm">
+
+                <strong>
+                    ML-KEM-768
+                </strong>
+
+                <br>
+
+                Post-Quantum Key Establishment
+
+            </div>
+
+
+
+            <div class="algorithm">
+
+                <strong>
+                    HKDF-SHA3-256
+                </strong>
+
+                <br>
+
+                Secure AES Key Derivation
+
+            </div>
+
+
+
+            <div class="algorithm">
+
+                <strong>
+                    AES-256-GCM
+                </strong>
+
+                <br>
+
+                Authenticated File Encryption
+
+            </div>
+
+
+
+            <div class="algorithm">
+
+                <strong>
+                    SHA3-256
+                </strong>
+
+                <br>
+
+                Integrity &amp; Tamper Detection
+
+            </div>
+
+
+
+            <div class="algorithm">
+
+                <strong>
+                    ML-DSA-65
+                </strong>
+
+                <br>
+
+                Post-Quantum Digital Signature
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SYSTEM CAPABILITIES
+========================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                System Capabilities
+            </h2>
+
+            <p>
+                Core security capabilities provided by
+                the QuantumSafe system.
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+            <!-- QUANTUM SAFE -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Quantum-Safe
+                </h3>
+
+                <p>
+                    Uses post-quantum cryptographic
+                    algorithms for key establishment
+                    and digital signatures.
+                </p>
+
+            </div>
+
+
+
+            <!-- TAMPER DETECTION -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Tamper Detection
+                </h3>
+
+                <p>
+                    SHA3-256 integrity verification detects
+                    modifications to encrypted data.
+                </p>
+
+            </div>
+
+
+
+            <!-- DIGITAL AUTHENTICATION -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ✍️
+                </div>
+
+                <h3>
+                    Digital Authentication
+                </h3>
+
+                <p>
+                    ML-DSA-65 provides post-quantum
+                    digital signature verification.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        QuantumSafe Data Encryption
+    </p>
+
+    <p>
+        Quantum-Safe Secure File Protection System
+    </p>
+
+    <p>
+        ML-KEM-768 • AES-256-GCM • SHA3-256 • ML-DSA-65
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
